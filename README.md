@@ -6,3 +6,38 @@ References:
 - [detect rectangle 1](https://stackoverflow.com/questions/61166180/detect-rectangles-in-opencv-4-2-0-using-python-3-7)
 - [detect rectangle 2](https://stackoverflow.com/questions/45767866/detect-rectangle-in-image-and-crop)
 - [detect rectangle 3](https://stackoverflow.com/questions/57125879/improve-rectangle-contour-detection-in-image-using-opencv)
+
+
+
+TRY THIS ONE OUT
+https://stackoverflow.com/questions/57125879/improve-rectangle-contour-detection-in-image-using-opencv
+
+
+
+
+
+## objective
+- read image of wall
+- detect corners of wall
+    - ???
+- straighten image given corners of wall
+    - use cv.findHomograph and cv.warpPerspective
+    - crop using np slicing
+- detect holds on the wall
+    - try using code from the NeuralClimb repo
+- create 2d binary matrix with 1s where there are holds on the wall
+    - dimensions of wall and each hold hole are known
+    - center of each detected hold (x,y coord) are mapped to the nearest hold hole; set the corresponding index of bmatrix to 1
+- for the sake of validation, draw bounding box around each hold
+
+
+## later
+- input binary matrix of holds, warped image as produced above
+- draw bounding box around wall holds as specified by binary matrix
+
+
+## considerations/complications
+- lighting
+- image dimensions
+- background: plants and support beams
+
