@@ -39,5 +39,19 @@ https://stackoverflow.com/questions/57125879/improve-rectangle-contour-detection
 ## considerations/complications
 - lighting
 - image dimensions
-- background: plants and support beams
+- background: plants and support beam
 
+
+### alternate approach
+- requires fixed camera location w.r.t the wall
+- picture of board with nothing on it
+- use pic as ground truth
+- new images, just subtract difference, the difference is where we have a hold
+- could threshold intensity so that differences in lighting doesn't give too much of a difference
+
+
+### alternate approach
+- try installing something on 4 corners that are unique beacon type things
+
+
+throw away things that don't pass threshold area
